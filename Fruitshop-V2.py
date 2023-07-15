@@ -1,6 +1,6 @@
-fruit = {'apple':150,'durian':300,'orange':50}
+fruit = {'apple':150,'durian':300,'orange':50, 'bannana':22}
 
-menucheck = {'a':'apple','b':'durian','c':'orange'}
+menucheck = {'a':'apple','b':'durian','c':'orange','d':'bannana'}
 
 
 print('ยินดีต้อนรับเข้าสู่โปรแกรมขายสินค้า')
@@ -35,7 +35,7 @@ while True:
     if menu == '1':
         print(text1)
         while submenu1.lower() != 'q':
-            print('กรุณาเลือกสินค้า\n[A]-apple [B]-durian [C]-orange or [T] Summary [Q] Exit menu')
+            print('กรุณาเลือกสินค้า\n[A]-apple [B]-durian [C]-orange [D]-bannana หรือกด [T] Summary [Q] Exit menu')
             submenu1 = input('สินค้า: ')
             if submenu1.lower() != 'q' and submenu1.lower() != 't':
                 product = menucheck[submenu1.lower()]
@@ -66,7 +66,7 @@ while True:
                 break
             print('----------')
     elif menu == '2':
-        product = input('กรุณาเลือกสินค้า: apple | durian | orange: ')
+        product = input('กรุณาเลือกสินค้า: apple | durian | orange | bannana: ')
         quantity = float(input('จำนวนสินค้า กี่กิโลกรัม: '))
         cal2 = quantity * fruit[product]
         print('-{} จำนวน: {} กิโลกรัม (รวม {:,.2f} บาท)'.format(product,quantity,cal2))
